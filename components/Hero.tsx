@@ -61,6 +61,17 @@ export default function Hero() {
         style={reduce ? undefined : { opacity: fade }}
         className="relative z-10 mx-auto flex h-full max-w-6xl flex-col justify-end px-6 pb-10 sm:pb-14"
       >
+        <motion.p
+          initial={reduce ? false : { opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.1, ease }}
+          className="mb-6 inline-flex w-fit items-center gap-2.5 rounded-full bg-white/10 py-2 pl-3 pr-4 text-sm text-white ring-1 ring-white/20 backdrop-blur-md sm:mb-8"
+        >
+          <svg aria-hidden="true" viewBox="0 0 10 10" className="h-2.5 w-2.5 text-lime">
+            <rect x="1.5" y="1.5" width="7" height="7" transform="rotate(45 5 5)" fill="currentColor" />
+          </svg>
+          For exporters &amp; manufacturers
+        </motion.p>
         <motion.h1
           initial={reduce ? false : { opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

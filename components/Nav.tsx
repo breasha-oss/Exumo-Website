@@ -5,6 +5,7 @@ import Logo from "./Logo";
 import DemoButton from "./DemoButton";
 
 const links = [
+  { href: "#for", label: "Who it's for" },
   { href: "#how", label: "How it works" },
   { href: "#product", label: "Product" },
   { href: "#results", label: "Results" },
