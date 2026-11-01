@@ -12,12 +12,6 @@ export default function Hero() {
   const reduce = useReducedMotion();
   const [videoReady, setVideoReady] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [struck, setStruck] = useState(false);
-
-  useEffect(() => {
-    const t = setTimeout(() => setStruck(true), reduce ? 0 : 1300);
-    return () => clearTimeout(t);
-  }, [reduce]);
 
   // The video can be ready before React hydrates, so its canplay event is missed.
   useEffect(() => {
@@ -78,20 +72,9 @@ export default function Hero() {
           transition={{ duration: 1.2, delay: 0.2, ease }}
           className="text-balance text-[clamp(2.4rem,6.6vw,5.75rem)] font-medium leading-[0.92] tracking-[-0.045em]"
         >
-          {/* Background-image strike so it follows each wrapped line on mobile. */}
-          <span
-            className="bg-no-repeat transition-[background-size,color] duration-700 ease-out-expo [-webkit-box-decoration-break:clone] [box-decoration-break:clone]"
-            style={{
-              backgroundImage: "linear-gradient(var(--color-lime), var(--color-lime))",
-              backgroundPosition: "0 58%",
-              backgroundSize: struck ? "100% 0.07em" : "0% 0.07em",
-              color: struck ? "rgb(255 255 255 / 0.5)" : "#fff",
-            }}
-          >
-            Databases sell you names.
-          </span>
+          Turn export reps into
           <br />
-          <span className="font-serif font-normal italic tracking-[-0.02em] text-lime">Exumo books you meetings.</span>
+          <span className="font-serif font-normal italic tracking-[-0.02em] text-lime">expert dealmakers.</span>
         </motion.h1>
 
         <motion.div
@@ -101,8 +84,9 @@ export default function Hero() {
           className="mt-8 flex flex-col gap-6 sm:mt-10 sm:flex-row sm:items-end sm:justify-between"
         >
           <p className="max-w-md text-[17px] leading-relaxed text-white/75">
-            AI agents find importers ready to buy, reach them on WhatsApp, LinkedIn and email, and put{" "}
-            <span className="text-white">5–10 qualified meetings a month</span> on your calendar.
+            Exumo does the hunting — markets, buyers, timing, outreach — so your team walks into every deal
+            already knowing the market, the buyer and the moment.{" "}
+            <span className="text-white">8–10 qualified meetings a month.</span>
           </p>
           <div className="flex items-center gap-3">
             <DemoButton />
@@ -116,8 +100,8 @@ export default function Hero() {
         </motion.div>
 
         <div className="mt-10 hidden items-center justify-between border-t border-white/15 pt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-white/50 sm:flex">
-          <span>AI-native sales infrastructure</span>
-          <span>For B2B exporters</span>
+          <span>Markets · Buyers · Outreach · Timing</span>
+          <span>Done for your team</span>
           <span>Scroll ↓</span>
         </div>
       </motion.div>

@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
+import DayInTheDeal from "@/components/DayInTheDeal";
 import ForExporters from "@/components/ForExporters";
 import ChatDemo from "@/components/ChatDemo";
 import Demo from "@/components/Demo";
@@ -16,6 +17,7 @@ export default function Home() {
       <Nav />
       <main id="main">
         <Hero />
+        <DayInTheDeal />
         <ForExporters />
         <ChatDemo />
         <Demo />
